@@ -1,0 +1,3 @@
+| filename          | size (o) | tempsCompression (s) | tauxCompression (%) | tempsdecompression(s) |
+|-------------------+----------+----------------------+---------------------+-----------------------|
+| Data/Test2/test10 | 97005568 |               30.931 |          0.13503169 |                43.361 |

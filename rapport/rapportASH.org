@@ -1,0 +1,193 @@
+#+TITLE: Rapport Compression Huffman Dynamique
+#+AUTHOR: Adrien Becchis & Stéphane Ferreira
+#+LANGUAGE:  fr
+#+OPTIONS:   H:3 num:t toc:t \n:t @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+STARTUP: latexpreview
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LaTeX_HEADER: \usepackage[margin=0.75in]{geometry}
+#+LATEX_HEADER: \usepackage[utf8x]{inputenc}
+
+
+
+§TOdo: organisation
+§GET: bon sujet
+
+
+* Modifications de l'arbre
+
+** COMMENT Démonstration de Propriétés
+Plus au programme...
+*** TODO Ordre croissant des Noueds
+
+*** TODO
+
+** Non échange entre Noeud et Descendant.
+
+L'algorithme va déclencher un échange entre deux noeuds quand leur poids violeront la propriété d'Arbre de Huffman Adaptatif, à savoir qu'un noeud dans l'ordre GDBH doit avoir un poids supérieur ou égal à tout poids le précédent dans l'ordre. Le test =incrémentable= vérifiant si cette propriété est maintenue en alourdissant une des feuilles.
+
+Hors il est tout simplement impossible qu'un ancêtre ai un poids inférieur à celui de ses descendants, puisque le poids d'un noeud est la somme du poids de ces deux fils (l'arbre étant complet). La seule situation où un père peut avoir le meme poids qu'un de ces fils, c'est quand l'autre fils est la feuille spéciale, au poids nul.
+
+
+** Nombre maximum d'échanges
+
+Le nombre maximum d'échange possible correspond à la hauteur de l'AHA moins 1.
+En effet après chaque échange, on appelle la procédure de traitement sur le père du noeud que l'on vient de swapper. Donc dans le pire des cas, (si l'échange se fait avec un noeud de meme profondeur) on fait un échange par niveau à l'exception du dernier. (la racine).
+
+La hauteur de l'arbre de huffman est dans le pire cas égale au nombre de caractère possible. Ceci arrive quand l'AHA est un peigne, par exemple quand la fréquence des lettre correspond à la suite $(2^i)_{i\in\mathbb{N}}$
+
+Par Exemple pour le mot =abbccccdddddddd=:
+[[file:img/abbccccdddddddd.png]]
+
+Par conséquent, dans le pire cas, le nombre maximum d'échange est $n-1$ (avec $n$ égal à la taille de l'alphabet des symboles)
+
+
+* Compression et décompression
+
+** Complexité Algorithme
+
+*** Complexité Temporelle
+
+Soit $N$ le nombre de caractères, $n$ le nombre de caractère différents, et $h$ la hauteur de l'arbre (avec $0\le h\le n-1$).
+- La boucle principale de l'algorithme est répétée pour chaque caractère donc exactement N fois.
+- La complexité pour retrouver la feuille correspondante à un du symbole dans l'arbre de Huffman dépend de l'implantation. Celui ci est de complexité constante si implanté avec une table de hachage, ou de complexité $O(n)$ si on a une liste des noeuds, où si on parcourt l'arbre (dont le nombre de noeuds total ne peut excéder $n+n/2$).
+- la transmission du code est en temps constant si la feuille contient son propre code. (sinon il est reconstruit en $O(h)$, en remontant l'arbre)
+- la procédure de modification est répétée au pire $h-1$ fois. Cette procédure a pour complexité celle de la procédure =finBloc= seule opération de complexité non constante. (sa complexité réelle dépend des implantations, )
+
+En agrégeant ces complexités, on a donc une complexité temporelle pire cas de $O(Nnh)$
+Donc linéaire par rapport à la longueur du texte, hauteur de l'arbre , et nombre de caractère possible.
+
+Il est cependant important de préciser qu'une *gestion optimale des entrées/sorties* (lecture et écriture de fichier) est *primordiale* pour avoir un programme efficace, les entrées sorties étant des opérations bien plus lentes que des opérations en mémoire vive/cache! (plusieurs ordre de grandeur.)
+
+*** Complexité Spatiale
+
+La complexité spatiale est de $O(n)$, correspondant seulement à la taille de mémoire de la structure de données utilisée pour encoder l'AHA, qui demeure $O(n)$ même si on enrichie la structure d'arbre avec une table de hachage et une liste en entre noeuds.
+A noter que le nombre total de caractère $N$ n'influe nullement sur la complexité mémoire vu que l'on a affaire à des flux d'octet.
+Il est d'ailleurs plus qu'intéressant d'augmenter de manière négligeable la consommation mémoire en utilisant Tampons/Buffers pour diminuer le nombre d'entrées sorties chronophages.
+
+
+
+** Encodage Abracadabra
+# §TODO: arbres différentes étapes. Code
+# [[file:img/aha-0.png]]g
+# [[file:img/aha-1.png]]
+# [[file:img/aha-2.png]]
+# [[file:img/aha-3.png]]
+# [[file:img/aha-4.png]]
+# [[file:img/aha-5.png]]
+# [[file:img/aha-6.png]]
+# [[file:img/aha-7.png]]
+# [[file:img/aha-8.png]]
+# [[file:img/aha-9.png]]
+# [[file:img/aha-10.png]]
+# [[file:img/aha-11.png]]
+§IMG: TODO
+Etapes:
+- 0. :: arbre vide
+- 1. :: insertion de =A=, émission code #A=00000
+- 2. :: insertion de =B=, émission de #B=0 00001
+- 3. :: insertion de =R=, émission de #R= 00 10001. Reconstruction arbre
+- 4. :: incrémentation =A=, émission A=0
+- 5. :: insertion de =C=, émission #C= 100 00010. Reconstruction arbre
+- 6. :: incrémentation =A=, émission A=0
+- 7. :: insertion de =D=, émission #D= 1100 00011. Reconstruction
+- 8. :: incrémentation =A=, émission A=0
+- 9. :: incrémentation de =B=, émission B=110, reconstruction
+- 10. :: incrémentation de =R=, émission de R=110
+- 11. :: incrémentation de =A=, émission de 0
+
+
+** Algorithme de décompression
+
+
+On suppose avoir  les procédures correspondantes:
+- bits2char :: donne le caractère correspondant à l'octet spécifié
+- lireBit(F) :: lit un bit d'un flux (et le supprime)
+- lireBits(F,n) :: lit n bit du flux et les retournes
+- ecrire(F, c) :: écrit le caractère ans le flux de sortie.
+- estFeuille(H) :: dit si le noeud arbre huffman est une feuille
+- lettreFeuille(H) :: renvoi la lettre associé à la feuille
+
+#+BEGIN_SRC fundamental
+  Procédure décompression(in : flux, out:flux)
+     var H : Huffman, s: symbole, buff: bit[8], b : bit;
+     var posCur : Huffman; // position courante arbre de huffman
+
+     buff <-  lireBits(in,8) // en supposant mode ascii/8bits
+     s <- bits2char(buff)
+     modifier(H,s);
+     posCur <- racine(H);
+     ecrire(F,s)
+
+     Tant que in n'est pas vide
+
+        b <- prochainBit(in);
+
+        Si b = 0 alors
+           posCur <- noeudGauche(posCur);
+        Sinon
+           posCur <- noeudDroit(posCur);
+        Fin Si
+
+        Si estFeuille(posCur) alors
+           Si estFeuilleSpeciale(posCur) alors
+             buff <- lireBits(in,8);
+             s <- bits2char(buff); ecrire(out,s);
+             modifier (H,s); posCur <- racine(H);
+           Sinon
+              s <- lettreFeuille(posCur); ecrire(out,s)
+               modifier(H,s); posCur <- racine(H);
+           Fin Si
+        Fin Si
+
+     Fin tant que
+
+  FinProcedure decompression
+#+END_SRC
+
+Note il suffit de remplacer 8 par la taille de l'encodage utilisé pour adapter l'algorithme à la version 5 bit, ou toute autre version de son choix
+
+
+* Implantation
+
+** TODO Structures de données
+
+*** COMMENT cp
+La structure est composée d’un arbre binaire classique + Liste doublement chainée
+pour l'ordre hiérarchique :
+C'est une structure d'arbre binaire classique, que l'on doit pouvoir parcourir selon
+l'ordre hiérarchique GDBH.
+Pour ce faire, on dote la structure d'une liste double chainée.
+Ainsi, chaque noeud connait : son père, ses fils, ses voisins dans l'ordre GDBH (grâce
+à  la liste chainée).
+
+** TODO Résultats sur Jeux de test
+
+Réalisée lors de la soutenance le 10 décembre.
+
+La compression sur le fichier test10 de 90Mo a mis au mieux 4s sur une machine de l'ari.
+# todo: table results.
+
+A noter que nos bons résultats sont plus liés à une bonne gestions des flux IO, qu'à notre implémentation de l'arbre de Huffman qui pourrait être légèrement améliorée.
+(cf remarques sur la Complexité)
+
+§TODO: coder, batcher..
+
+* TODO Dispatch
+
+sur Sensibilité des performances aux entrées sorties.
+
+* Temps
+
+  Data/ExperimentalData:
+#+ATTR_LATEX:  :float :environment longtable
+#+include: benchs/exp.org
+
+Data/Test1/:
+#+ATTR_LATEX:  :float :environment longtable
+#+include: benchs/test1.org
+
+Data/Test2/:
+#+ATTR_LATEX:  :float :environment longtable
+#+include: benchs/test2.org

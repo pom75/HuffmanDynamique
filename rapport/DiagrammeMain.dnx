@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<umlnotation:UMLDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_hantgGGeEeOrVfjPb8vkqg" type="Class" name="classdiagram.dnx">
+  <eAnnotations xmi:id="_hantgWGeEeOrVfjPb8vkqg" source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+    <details xmi:id="_hantgmGeEeOrVfjPb8vkqg" key="com.ibm.xtools.activities.javaVisualizerActivity" value="1"/>
+  </eAnnotations>
+  <children xmi:type="umlnotation:UMLShape" xmi:id="_mIrYEGGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+    <children xmi:type="notation:DecorationNode" xmi:id="_mJAIMGGeEeOrVfjPb8vkqg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_mJAIMWGeEeOrVfjPb8vkqg" width="1320" height="1320"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_mJAIMmGeEeOrVfjPb8vkqg" type="Stereotype"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_mJAvQGGeEeOrVfjPb8vkqg" type="Name"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_mJBWUGGeEeOrVfjPb8vkqg" type="Parent"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_mJB9YGGeEeOrVfjPb8vkqg" visible="false" type="ANNOTATION_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_mJG14GGeEeOrVfjPb8vkqg" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_mJG14WGeEeOrVfjPb8vkqg" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=asHuffman%5Bjcu%5Ename=asHuffman.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIrYEWGeEeOrVfjPb8vkqg" x="8844" y="1056"/>
+  </children>
+  <children xmi:type="umlnotation:UMLShape" xmi:id="_nW7T4mGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nW768GGeEeOrVfjPb8vkqg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_nW768WGeEeOrVfjPb8vkqg" width="1320" height="1320"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW768mGeEeOrVfjPb8vkqg" type="Stereotype"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW7682GeEeOrVfjPb8vkqg" type="Name"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW769GGeEeOrVfjPb8vkqg" type="Parent"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nW8iAGGeEeOrVfjPb8vkqg" visible="false" type="ANNOTATION_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nW9JEGGeEeOrVfjPb8vkqg" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nW9JEWGeEeOrVfjPb8vkqg" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=BitOutputStream%5Bjcu%5Ename=BitOutputStream.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nW7T42GeEeOrVfjPb8vkqg" x="5412" y="14652"/>
+  </children>
+  <children xmi:type="umlnotation:UMLShape" xmi:id="_nW--QGGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nW--QmGeEeOrVfjPb8vkqg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_nW--Q2GeEeOrVfjPb8vkqg" width="1320" height="1320"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW--RGGeEeOrVfjPb8vkqg" type="Stereotype"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW_lUGGeEeOrVfjPb8vkqg" type="Name"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nW_lUWGeEeOrVfjPb8vkqg" type="Parent"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nW_lUmGeEeOrVfjPb8vkqg" visible="false" type="ANNOTATION_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXAMYGGeEeOrVfjPb8vkqg" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXAMYWGeEeOrVfjPb8vkqg" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=BitInputStream%5Bjcu%5Ename=BitInputStream.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nW--QWGeEeOrVfjPb8vkqg" x="12672" y="15048"/>
+  </children>
+  <children xmi:type="umlnotation:UMLShape" xmi:id="_nXAzcGGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nXAzcmGeEeOrVfjPb8vkqg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_nXAzc2GeEeOrVfjPb8vkqg" width="1320" height="1320"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXAzdGGeEeOrVfjPb8vkqg" type="Stereotype"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXAzdWGeEeOrVfjPb8vkqg" type="Name"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXAzdmGeEeOrVfjPb8vkqg" type="Parent"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXBagGGeEeOrVfjPb8vkqg" visible="false" type="ANNOTATION_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXCBkGGeEeOrVfjPb8vkqg" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXCBkWGeEeOrVfjPb8vkqg" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Compresseur%5Bjcu%5Ename=Compresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nXAzcWGeEeOrVfjPb8vkqg" x="4620" y="7656"/>
+  </children>
+  <children xmi:type="umlnotation:UMLShape" xmi:id="_nXCBkmGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nXCooGGeEeOrVfjPb8vkqg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_nXCooWGeEeOrVfjPb8vkqg" width="1320" height="1320"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXCoomGeEeOrVfjPb8vkqg" type="Stereotype"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXCoo2GeEeOrVfjPb8vkqg" type="Name"/>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_nXCopGGeEeOrVfjPb8vkqg" type="Parent"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXCopWGeEeOrVfjPb8vkqg" visible="false" type="ANNOTATION_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXD2wGGeEeOrVfjPb8vkqg" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+    <children xmi:type="notation:ListCompartment" xmi:id="_nXD2wWGeEeOrVfjPb8vkqg" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Decompresseur%5Bjcu%5Ename=Decompresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nXCBk2GeEeOrVfjPb8vkqg" x="12540" y="7788"/>
+  </children>
+  <element xsi:nil="true"/>
+  <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nqDrQGGeEeOrVfjPb8vkqg" source="_mIrYEGGeEeOrVfjPb8vkqg" target="_nXCBkmGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nqESUGGeEeOrVfjPb8vkqg" type="KindLabel">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqESUmGeEeOrVfjPb8vkqg" type="Stereotype"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqESVGGeEeOrVfjPb8vkqg" type="Kind"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqESU2GeEeOrVfjPb8vkqg" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nqESUWGeEeOrVfjPb8vkqg" y="-186"/>
+    </children>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=asHuffman%5Bjcu%5Ename=asHuffman.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Decompresseur%5Bjcu%5Ename=Decompresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nqDrQWGeEeOrVfjPb8vkqg" points="[52, 103, -2817, -2458]$[52, 737, -2817, -1824]$[2909, 737, 40, -1824]$[2909, 2561, 40, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvEHEGGeEeOrVfjPb8vkqg" id="(0.6667233783841185,0.9763246899661782)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvEHEWGeEeOrVfjPb8vkqg" id="(0.5,-2.0507208608183274E-16)"/>
+  </edges>
+  <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nqE5YGGeEeOrVfjPb8vkqg" source="_mIrYEGGeEeOrVfjPb8vkqg" target="_nXAzcGGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nqE5YmGeEeOrVfjPb8vkqg" type="KindLabel">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqE5ZGGeEeOrVfjPb8vkqg" type="Stereotype"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqE5ZmGeEeOrVfjPb8vkqg" type="Kind"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqE5ZWGeEeOrVfjPb8vkqg" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nqE5Y2GeEeOrVfjPb8vkqg" y="-186"/>
+    </children>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=asHuffman%5Bjcu%5Ename=asHuffman.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Compresseur%5Bjcu%5Ename=Compresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nqE5YWGeEeOrVfjPb8vkqg" points="[26, 103, 2895, -2221]$[26, 737, 2895, -1587]$[-2830, 737, 39, -1587]$[-2830, 2324, 39, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvEuIGGeEeOrVfjPb8vkqg" id="(0.33339000817710696,0.9763246899661782)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvEuIWGeEeOrVfjPb8vkqg" id="(0.49999999999999994,-1.85233136817297E-16)"/>
+  </edges>
+  <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nqJK0mGeEeOrVfjPb8vkqg" source="_nXAzcGGeEeOrVfjPb8vkqg" target="_nW7T4mGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nqJK1GGeEeOrVfjPb8vkqg" type="KindLabel">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqJx4GGeEeOrVfjPb8vkqg" type="Stereotype"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqJx4mGeEeOrVfjPb8vkqg" type="Kind"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqJx4WGeEeOrVfjPb8vkqg" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nqJK1WGeEeOrVfjPb8vkqg" y="-186"/>
+    </children>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Compresseur%5Bjcu%5Ename=Compresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=BitOutputStream%5Bjcu%5Ename=BitOutputStream.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nqJK02GeEeOrVfjPb8vkqg" points="[39, 103, 39, -2221]$[39, 2324, 39, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvN4EGGeEeOrVfjPb8vkqg" id="(0.49999999999999994,0.9786150712830953)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvN4EWGeEeOrVfjPb8vkqg" id="(0.4999999999999999,0.0)"/>
+  </edges>
+  <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nqJx42GeEeOrVfjPb8vkqg" source="_nXCBkmGeEeOrVfjPb8vkqg" target="_nW--QGGeEeOrVfjPb8vkqg" fontName="Sans" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nqJx5WGeEeOrVfjPb8vkqg" type="KindLabel">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqJx52GeEeOrVfjPb8vkqg" type="Stereotype"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqKY8WGeEeOrVfjPb8vkqg" type="Kind"/>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_nqKY8GGeEeOrVfjPb8vkqg" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nqJx5mGeEeOrVfjPb8vkqg" y="-186"/>
+    </children>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Decompresseur%5Bjcu%5Ename=Decompresseur.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=BitInputStream%5Bjcu%5Ename=BitInputStream.java%5Bjpack%5Ename=core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=asHuffmanDynamique%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nqJx5GGeEeOrVfjPb8vkqg" points="[40, 103, 40, -2934]$[40, 3037, 40, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvOfIGGeEeOrVfjPb8vkqg" id="(0.5,0.9763246899661777)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nvOfIWGeEeOrVfjPb8vkqg" id="(0.5001252818842395,-1.208630832920835E-15)"/>
+  </edges>
+</umlnotation:UMLDiagram>

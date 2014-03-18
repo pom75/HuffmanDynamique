@@ -1,0 +1,61 @@
+
+* Cours
+** Dynamique vers statique
+inconvénient:
+- double parcours du texte
+- besoin de mémoriser et transmettre le codage
+
+§s
+** Principe								  :a:
+Le compresseur et décompresseur construisent l'arbre parrallèlement en lisant le texte/texte codé.
+Seule connaissance coune requise: le codage normal des caractères
+
+On se fixe ordre de lecture: de gauche à droite, et de bas en haut. "parcours hiérarchique (niveau) GDBH"
+
+AHA: Arbre Huffman adaptatif
+si parcoursGADBH: fréquence ordre croissant: Prop P
+
+Quand on met à jour avec nouvelle lecture: soit la propriété est maintenue, soit elle n'est pas et on modifie arbre pour la rétablir
+Déplace arbre à la fin du block de ceux de meme poids
+# " qu'à cela ne tienne!
+
+En modifiant arbre on modifie le codage des lettres
+
+On échange jamais noeud avec son ancetre? §why:projet
+
+algo modification: vérifie si insérable, sinon modifie.
+
+Comp: complexité O(nN)
+Decomp: complexité: O(nN)
+> implantation is mini projet
+** Conclusion:
+dynamique: à la volée: permet de commencer à décompresser avant d'avoir fini de compressé.
+# échange streeming
+
+Pour les gros fichier, dynamique bien meilleur
+
+* TD
+envoyer par mail
+Soutenance
+huffman dynamique
+
+Langage qu'on préfère:
+Utiliser langage qui permet de facilement manipuler chaine de caractères. ()
+
+Et arbres.
+
+
+
+Présentation:
+point délicats soulevés, choix des structures des données.
+
+
+slides:2/3
+** principe
+se passe d'une lecture préalable.
+construit et fait évoluer arbre au fur et à mesure.
+
+Arbre n'est pas aussi optimal en taille du code que Statique. Mais il n'y a pas de *table de code à renvoyer*.
+
+Codage es caractère ne sera pas constant dans le texte. (association lettre et code évolue.)
+Décompression. expliquée dans le sujet.
